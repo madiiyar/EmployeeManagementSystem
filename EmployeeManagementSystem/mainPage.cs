@@ -21,5 +21,38 @@ namespace EmployeeManagementSystem
         {
             Environment.Exit(0);
         }
+
+        private void plogoutBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("Are you sure you want to logout?", "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (check == DialogResult.Yes)
+            {
+                loginForm login = new loginForm();
+                login.Show();
+                this.Hide();
+            }
+        }
+
+        private void dashboardBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = true;
+            addEmployee1.Visible = false;
+            salary1.Visible = false;
+        }
+
+        private void addEmployeeBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            addEmployee1.Visible = true;
+            salary1.Visible = false;
+        }
+
+        private void salaryBtn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            addEmployee1.Visible = false;
+            salary1.Visible = true;
+        }
     }
 }
