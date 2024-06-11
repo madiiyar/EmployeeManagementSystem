@@ -118,22 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="7237991" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7237991.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2558509" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2558509.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="application-for-leaving-school" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\application-for-leaving-school.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8899687" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8899687.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="turn-off (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\turn-off (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="application-for-leaving-school" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\application-for-leaving-school.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="turn-off (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\turn-off (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2558509" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2558509.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7237991" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7237991.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-rainbow-curves-abstract-colorful-background-image_2164067" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-rainbow-curves-abstract-colorful-background-image_2164067.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

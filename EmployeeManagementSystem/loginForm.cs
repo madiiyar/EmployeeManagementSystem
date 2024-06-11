@@ -79,9 +79,10 @@ namespace EmployeeManagementSystem
                             if (dt.Rows.Count >= 1)
                             {
                                 MessageBox.Show("Login Succesfully", "Information Message", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                                this.Hide();
                                 mainPage mainPage = new mainPage();
                                 mainPage.Show();
-                                this.Hide();
+                                
                             }
                             else
                             {

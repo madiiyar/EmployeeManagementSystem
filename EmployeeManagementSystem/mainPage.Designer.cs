@@ -33,21 +33,21 @@
             this.exit = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.plogoutBtn = new System.Windows.Forms.PictureBox();
             this.salaryBtn = new System.Windows.Forms.Button();
             this.addEmployeeBtn = new System.Windows.Forms.Button();
             this.dashboardBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dashboard1 = new EmployeeManagementSystem.Dashboard();
             this.addEmployee1 = new EmployeeManagementSystem.AddEmployee();
             this.salary1 = new EmployeeManagementSystem.Salary();
+            this.plogoutBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.plogoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,17 +112,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Sign out";
             // 
-            // plogoutBtn
-            // 
-            this.plogoutBtn.Image = global::EmployeeManagementSystem.Properties.Resources.turn_off__1_;
-            this.plogoutBtn.Location = new System.Drawing.Point(36, 702);
-            this.plogoutBtn.Name = "plogoutBtn";
-            this.plogoutBtn.Size = new System.Drawing.Size(50, 50);
-            this.plogoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.plogoutBtn.TabIndex = 2;
-            this.plogoutBtn.TabStop = false;
-            this.plogoutBtn.Click += new System.EventHandler(this.plogoutBtn_Click);
-            // 
             // salaryBtn
             // 
             this.salaryBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
@@ -181,16 +170,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Welcome, User";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EmployeeManagementSystem.Properties.Resources._7237991;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 52);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(119, 119);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dashboard1);
@@ -204,6 +183,7 @@
             // 
             // dashboard1
             // 
+            this.dashboard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
             this.dashboard1.Name = "dashboard1";
             this.dashboard1.Size = new System.Drawing.Size(1337, 808);
@@ -223,6 +203,27 @@
             this.salary1.Size = new System.Drawing.Size(1291, 831);
             this.salary1.TabIndex = 0;
             // 
+            // plogoutBtn
+            // 
+            this.plogoutBtn.Image = global::EmployeeManagementSystem.Properties.Resources.turn_off__1_;
+            this.plogoutBtn.Location = new System.Drawing.Point(36, 702);
+            this.plogoutBtn.Name = "plogoutBtn";
+            this.plogoutBtn.Size = new System.Drawing.Size(50, 50);
+            this.plogoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.plogoutBtn.TabIndex = 2;
+            this.plogoutBtn.TabStop = false;
+            this.plogoutBtn.Click += new System.EventHandler(this.plogoutBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::EmployeeManagementSystem.Properties.Resources._7237991;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 52);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(119, 119);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // mainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,9 +239,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.plogoutBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

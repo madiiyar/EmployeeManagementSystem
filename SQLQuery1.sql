@@ -17,7 +17,9 @@ create table employees
   )
 
 
-SELECT * FROM employees;
+SELECT * FROM employees WHERE delete_date IS not NULL;
 
 alter table employees
 add  status varchar(max) null
+
+delete from employees;

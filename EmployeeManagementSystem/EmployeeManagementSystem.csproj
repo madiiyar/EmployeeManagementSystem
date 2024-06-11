@@ -85,6 +85,7 @@
     <Compile Include="Salary.Designer.cs">
       <DependentUpon>Salary.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalaryData.cs" />
     <EmbeddedResource Include="AddEmployee.resx">
       <DependentUpon>AddEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +144,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\application-for-leaving-school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Directory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-rainbow-curves-abstract-colorful-background-image_2164067.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

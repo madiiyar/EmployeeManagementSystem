@@ -27,7 +27,7 @@ namespace EmployeeManagementSystem
 
 
 
-        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\amadi\\Documents\\employee.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\amadi\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
 
         public List<EmployeeData> employeeListData()
         {
@@ -39,7 +39,7 @@ namespace EmployeeManagementSystem
                 {
                     connection.Open();
 
-                    string selectData = "SELECT * FROM employee WEHRE delete_date IS NULL";
+                    string selectData = "SELECT * FROM employees WHERE delete_date IS NULL";
 
                     using (SqlCommand cmd = new SqlCommand(selectData, connection))
                     {
@@ -62,6 +62,47 @@ namespace EmployeeManagementSystem
                     }
                 }
                 catch(Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return listdata;
+        }
+
+        public List<EmployeeData> salaryEmployeeListData()
+        {
+            List<EmployeeData> listdata = new List<EmployeeData>();
+
+            if (connection.State != ConnectionState.Open)
+            {
+                try
+                {
+                    connection.Open();
+
+                    string selectData = "SELECT * FROM employees WHERE delete_date IS NULL";
+
+                    using (SqlCommand cmd = new SqlCommand(selectData, connection))
+                    {
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            EmployeeData employeedata = new EmployeeData();
+                            employeedata.EmployeeID = reader["employee_id"].ToString();
+                            employeedata.Name = reader["full_name"].ToString();
+                            employeedata.Position = reader["position"].ToString();
+                            employeedata.Salary = (int)reader["salary"];
+
+
+                            listdata.Add(employeedata);
+                        }
+                    }
+                }
+                catch (Exception ex)
                 {
                     Console.WriteLine("Error: " + ex);
                 }

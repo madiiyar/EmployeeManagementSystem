@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.statusField = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.importBtn = new System.Windows.Forms.Button();
             this.importPicture = new System.Windows.Forms.PictureBox();
             this.clearBtn = new System.Windows.Forms.Button();
@@ -48,8 +51,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.employeeIdField = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.statusField = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,13 +70,27 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(44, 116);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1167, 231);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -114,6 +129,28 @@
             this.panel2.Size = new System.Drawing.Size(1244, 333);
             this.panel2.TabIndex = 1;
             // 
+            // statusField
+            // 
+            this.statusField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.statusField.FormattingEnabled = true;
+            this.statusField.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.statusField.Location = new System.Drawing.Point(653, 145);
+            this.statusField.Name = "statusField";
+            this.statusField.Size = new System.Drawing.Size(245, 37);
+            this.statusField.TabIndex = 22;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(551, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 25);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Status:";
+            // 
             // importBtn
             // 
             this.importBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
@@ -128,6 +165,7 @@
             this.importBtn.TabIndex = 20;
             this.importBtn.Text = "Import";
             this.importBtn.UseVisualStyleBackColor = false;
+            this.importBtn.Click += new System.EventHandler(this.importBtn_Click);
             // 
             // importPicture
             // 
@@ -136,6 +174,7 @@
             this.importPicture.Location = new System.Drawing.Point(1026, 47);
             this.importPicture.Name = "importPicture";
             this.importPicture.Size = new System.Drawing.Size(144, 135);
+            this.importPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.importPicture.TabIndex = 19;
             this.importPicture.TabStop = false;
             // 
@@ -153,6 +192,7 @@
             this.clearBtn.TabIndex = 18;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // deleteBtn
             // 
@@ -168,6 +208,7 @@
             this.deleteBtn.TabIndex = 17;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // updateBtn
             // 
@@ -183,6 +224,7 @@
             this.updateBtn.TabIndex = 16;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // addBtn
             // 
@@ -205,9 +247,11 @@
             this.postionField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.postionField.FormattingEnabled = true;
             this.postionField.Items.AddRange(new object[] {
-            "Male",
-            "Female",
-            "Other"});
+            "Business Management",
+            "Front-End Developer",
+            "Back-End Developer",
+            "Data Adminstrator",
+            "UI/UX Design"});
             this.postionField.Location = new System.Drawing.Point(653, 89);
             this.postionField.Name = "postionField";
             this.postionField.Size = new System.Drawing.Size(245, 37);
@@ -299,28 +343,6 @@
             this.label2.Size = new System.Drawing.Size(141, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Employee ID:";
-            // 
-            // statusField
-            // 
-            this.statusField.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.statusField.FormattingEnabled = true;
-            this.statusField.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.statusField.Location = new System.Drawing.Point(653, 145);
-            this.statusField.Name = "statusField";
-            this.statusField.Size = new System.Drawing.Size(245, 37);
-            this.statusField.TabIndex = 22;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(551, 154);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 25);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Status:";
             // 
             // AddEmployee
             // 
